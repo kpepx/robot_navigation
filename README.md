@@ -43,6 +43,24 @@ roslaunch robot_navigation robot_navigation.launch
 ```
 python3 ~/catkin_ws/src/robot_navigation/scripts/voice_control.py
 ```
+# How to create map
+คำสั่งเพื่อเปิด Gazabo
+```
+roslaunch robot_navigation testworld.launch
+```
+คำสั่งเพื่อสร้างแผนที่
+```
+roslaunch robot_navigation robot_navigation_slam.launch slam_methods:=gmapping
+```
+จะดึงการควบคุมจาก turtlebot3 มา
+```
+export TURTLEBOT3_MODEL=burger
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+```
+เมื่อสร้างแผนที่เสร็จ ถ้าต้องการบันทึก
+```
+rosrun map_server map_saver -f ~/catkin_ws/src/robot_navigation/map/maps
+```
 
 # How to use voice to control robot
 การสั่งงานเป็นภาษาอังกฤษ (English) โดยเมื่อเจอคำประโยค
