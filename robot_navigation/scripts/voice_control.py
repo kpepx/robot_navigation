@@ -7,7 +7,7 @@ from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 voice = sr.Recognizer()
 
 meeting = False
-home = False
+home = True
 
 def command_voice():
     txt_voice = ""
@@ -34,6 +34,7 @@ def command_voice():
         except sr.RequestError as e:
             rospy.loginfo("Could not request results; {0}".format(e))
     else:
+        rospy.loginfo("You have arrived at the meeting room. I will go home, Goodbye...")
         txt_voice = "home"
 
     goal = MoveBaseGoal()
@@ -42,7 +43,6 @@ def command_voice():
 
     if home:
         txt_voice = "complete"
-        rospy.loginfo("You have arrived at the meeting room. I will go home, Goodbye...")
         goal.target_pose.pose.position.x = -0.053448
         goal.target_pose.pose.position.y = -0.76843
         goal.target_pose.pose.orientation.z = 0.00000
