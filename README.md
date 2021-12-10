@@ -7,7 +7,20 @@ Name Project: หุ่นยนต์นำทางไปยังห้อง
 # Environment
 * OS: Ubuntu 20.04.3 LTS
 * ROS: Noetic Ninjemys
-* Gazebo: 
+* Gazebo: 11.9
+
+# Package
+* actionlib
+* amcl
+* gazebo_ros
+* geometry_msgs
+* map_server
+* move_base_msgs
+* pyaudio
+* rospy
+* rviz
+* speech_recognition
+* std_msgs
 
 # How to run
 คำสั่งเพื่อเปิด Gazabo
@@ -32,9 +45,6 @@ python3 ~/catkin_ws/src/robot_navigation/scripts/voice_control.py
 - You can select: meeting room 10 - meeting room 60
 
 หุ่นยนต์กำลังรอรับคำสั่งเสียง ให้สั่งงานด้วยเสียงพูด ตัวอย่างเช่นอยากไปห้องประชุม 10 ให้ใช้คำสั่งเสียง "meeting room 10" หุ่นยนต์จะตอบกลับมา "meeting room 10. I have recieve command." และ "Follow me going to meeting room 10." หุ่นยนต์จะนำทางไปยังห้องประชุม 10 เมื่อถึงห้องประชุม หุ่นยนต์จะตอบกลับมา "You have arrived at the meeting room. I will go home, Goodbye..." จากนั้นหุ่นยนต์จะกลับไปยังตำแหน่ง home และรอรับคำสั่งต่อไป
-
-# Basic learning
-* สามารถสร้าง World ใน Gazabo โดยใช้ Buliding Editor และ Model Editor
 
 # Problem
 * เมื่อใส่ model โต๊ะ เก้าอี้ ที่จะใช้ทำห้องประชุม จะไม่สามารถเปิด world ที่ save ไว้ขึ้นมาได้ เนื่องจาก Gazebo ค้าง ทำงานต่อไปไม่ได้ จึงเปลี่ยน model เป็นสี่เหลี่ยม และทรงกระบอก เพื่อแก้ปัยหาให้สามารถเปิดและทำงานส่วนอื่นต่อไปได้
