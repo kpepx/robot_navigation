@@ -11,14 +11,14 @@ Name Project: หุ่นยนต์นำทางไปยังห้อง
 
 # How to run
 คำสั่งเพื่อเปิด Gazabo
-...
+```
 roslaunch robot_navigation testworld.launch
-...
+```
 คำสั่งเพื่อเปิด Rviz
-...
+```
 roslaunch robot_navigation robot_navigation.launch
-...
+```
 คำสั่งเพื่อสั่งงานด้วยเสียงกับหุ่นยนต์
-...
+```
 rosrun robot_navigation voice_control.py
-...
+```
