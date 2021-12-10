@@ -26,11 +26,7 @@ Name Project: หุ่นยนต์นำทางไปยังห้อง
 เริ่มรันจาก
 ```
 cd ~/catkin_ws
-```
-```
 catkin_make
-```
-```
 source devel/setup.bash
 ```
 คำสั่งเพื่อเปิด Gazabo
